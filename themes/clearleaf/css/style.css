@@ -134,6 +134,37 @@ nav, .eflat-menu {
     color:#f7f1f1 !important;
     background-color: #803331 !important;
 }
+
+.summary {
+	float: right;
+}
+
+.grid-view table.items {
+    background: white;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px #D0E3EF solid;
+	margin-top: 15px;
+}
+
+.grid-view table thead th, .grid-view table thead th a {
+	color: white!important;
+}
+
+.grid-view table.items tr.odd {
+    background: #E5F1F4;
+}
+
+.grid-view table.items tr.even {
+    background: #F8F8F8;
+}
+
+.grid-view table.items th, .grid-view table.items td {
+    font-size: 0.9em;
+    border: 1px white solid;
+    padding: 0.3em;
+}
+
 /*
 .nav li {
   display: block;
@@ -299,4 +330,10 @@ h3 a {
 {
 	background: #e54c6a;
 	text-align: center;
+}
+
+.pp_pic_holder {
+	font-family: Verdana, Geneva, sans-serif;
+	text-decoration: none;
+	font-weight: normal;
 }
