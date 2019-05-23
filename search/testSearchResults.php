@@ -91,7 +91,7 @@ function microtime_diff($start, $end = null)
 	
    class MyDB extends SQLite3 {
       function __construct() {
-         $this->open('../../../data/pbslides.db');
+         $this->open('../../../../data/pbslides.db');
       }
    }
    
