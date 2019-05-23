@@ -181,7 +181,7 @@ if (!isset($_GET['slide'])) {
 							<p>&nbsp;</p>					
 						 	<p>
 								<a href="http://images.peabody.yale.edu/nclc/<?=$data['image'] ?>.jpg" rel="prettyphoto[]">
-									<img src="http://images.peabody.yale.edu/nclc/<?=$data['image'] ?>.jpg" alt="<?=$data['image'] ?>" />
+									<img src="http://images.peabody.yale.edu/nclc/web/<?=$data['image'] ?>.jpg" alt="<?=$data['image'] ?>" />
 								</a>
 							</p>
 

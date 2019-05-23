@@ -813,8 +813,12 @@ if( !empty($data['slide_id']) ||
 	$maxResults = 200;				
 					
 	if( $anyPost === false ) {
-
+		
+//		normal select
 		$query = 'SELECT * FROM SLIDES ORDER BY `slide-id` LIMIT ' . $maxResults . ';';
+		
+//		random select
+//		$query = 'SELECT * FROM SLIDES WHERE `slide-id` IN (SELECT `slide-id` FROM SLIDES ORDER BY RANDOM() LIMIT ' . $maxResults . ');';
 
 	} else {
 

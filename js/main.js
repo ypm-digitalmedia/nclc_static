@@ -73,7 +73,7 @@ $(document).ready(function() {
 
 			var savedHTML = '<div id="yw0" class="grid-view">';
 				savedHTML += '	<table class="items sortable-items"><thead><tr>';
-				savedHTML += '			<th id="yw0_c0">Remove</th><th id="yw0_c1"><a class="sort-link" href="/nclc/saved?Slideindex_sort=slide_id">Slide</a></th><th id="yw0_c2"><a class="sort-link" href="/nclc/saved?Slideindex_sort=image">Image</a></th><th id="yw0_c3">Family Name</th><th id="yw0_c4"><a class="sort-link" href="/nclc/saved?Slideindex_sort=genus">Genus</a></th><th id="yw0_c5"><a class="sort-link" href="/nclc/saved?Slideindex_sort=species">Species</a></th><th id="yw0_c6">Sort</th></tr>';
+				savedHTML += '			<th id="yw0_c0">Remove</th><th id="yw0_c1"><a class="sort-link" href="#">Slide</a></th><th id="yw0_c2"><a class="sort-link" href="#">Image</a></th><th id="yw0_c3">Family Name</th><th id="yw0_c4"><a class="sort-link" href="#">Genus</a></th><th id="yw0_c5"><a class="sort-link" href="#">Species</a></th><th id="yw0_c6">Sort</th></tr>';
 				savedHTML += '		</thead><tbody class="ui-sortable">';
 
 
@@ -81,7 +81,7 @@ $(document).ready(function() {
 
 				var rowType = index%2==0?"odd":"even";
 
-				savedHTML += '			<tr class="savedrow '+rowType+'"><td><a class="removesaved-table" href="#" slide="'+ row['slide-id']+'">Remove</a></td><td>'+ row['slide-id']+'</td><td><a href="http://images.peabody.yale.edu/nclc/' + row['image'] + '.jpg" rel="prettyPhoto[]"><img src="http://images.peabody.yale.edu/nclc/web/'+row['image']+'.jpg" alt="'+row['image']+'"></a></td><td>'+row['family']+'</td><td>'+row['genus']+'</td><td>'+row['species']+'</td><td class="sortable-column" data-id="'+ row['slide-id'] +'" image-id="'+ row['image']+'"><img class="sortable-column-handler" style="cursor: move;" src="../assets/78bd912c/icon.png" alt=""></td></tr>';
+				savedHTML += '			<tr class="savedrow '+rowType+'"><td><a class="removesaved-table" href="#" slide="'+ row['slide-id']+'">Remove</a></td><td><a href="../slide/'+ row['slide-id']+'" title="View Info">'+row['slide-id']+'</a></td><td><a href="http://images.peabody.yale.edu/nclc/' + row['image'] + '.jpg" rel="prettyPhoto[]"><img src="http://images.peabody.yale.edu/nclc/web/'+row['image']+'.jpg" alt="'+row['image']+'"></a></td><td>'+row['family']+'</td><td>'+row['genus']+'</td><td>'+row['species']+'</td><td class="sortable-column" data-id="'+ row['slide-id'] +'" image-id="'+ row['image']+'"><img class="sortable-column-handler" style="cursor: move;" src="../assets/78bd912c/icon.png" alt=""></td></tr>';
 
 			});
 
@@ -113,11 +113,6 @@ $(document).ready(function() {
 						clipboard[i] = $(this).data('id');
 					});
 
-				   /* $.ajax({
-						url : '/site/sortable',
-						type : 'POST',
-						data : ({'ids' : ids, 'clipboard' : clipboard, 'name' : 'sortable_site/savedslides'}),
-					});*/
 				}
 			});
 
